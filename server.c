@@ -5,7 +5,7 @@
 #include "libs/sending.h" // for sendData
 
 int main() {
-    int listener = makeListeningSock(8000);
+    int listener = makeListeningSock(80);
     for (;;) {
         struct requestValues rv;
         rv.sockfd = accept(listener, NULL, NULL);
