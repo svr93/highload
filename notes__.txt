@@ -1,0 +1,41 @@
+Материалы, использованные при написании сервера:
+1. http://rsdn.ru/article/unix/sockets.xml - основная статья
+2. http://www.ibm.com/developerworks/ru/library/l-hisock/ - использование
+sendfile
+3. http://www.linuxcenter.ru/lib/articles/programming/sendfile.phtml - 
+использование sendfile (2)
+4. http://beej.us/guide/bgnet/output/html/singlepage/bgnet.html#simpleserver -
+использование SO_REUSEADDR
+5. http://linux.die.net/man/ - справочник по заголовочным файлам
+================================================
+Даты изменения файлов:
+окт 12 21:08 listener.c +++
+окт 12 21:18 listener.h +++
+окт 15 04:03 strfuncs.c (no tabs) +++
+окт 13 10:25 strfuncs.h +++
+окт 16 05:10 parse.c (no tabs, perror pointer) +++
+окт 16 05:07 parse.h (no tabs) +++
+окт 13 01:55 conttype.c +++
+окт 13 01:58 conttype.h +++
+окт 15 04:29 resphead.c (no tabs) +++
+окт 15 03:17 resphead.h (no tabs) +++
+окт 16 05:13 sending.c (no tabs, perror pointer) +++
+окт 16 03:31 sending.h (no tabs) +++
+===
+окт 16 04:53 server.c (no tabs) +++
+окт 13 06:00 make.sh +++
+================================================
+1. Опцию TCP_CORK рекомендовано устанавливать для sendfile(), однако ввиду 
+потерь производительности на localhost она не используется.
+2. Не использую restrict, bulletin, align.
+3. Сервер не keep-alive.
+4. const <type_name>* в функциях, где данные только для чтения.
+5. Не использую bool.
+6. Если не поставлен слеш в конце директории - не считать за ошибку.
+7. Подумать об упаковке данных в структурах.
+!!! Заменить keep-alive на close в заголовках
+================================================
+200 - isFound = 1; isAccessDenied = 0;
+404 - isFound = 0; isAccessDenied = 0;
+403 - isFound = 0; isAccessDenied = 1;
+405 - isFound = 1; isAccessDenied = 1;
