@@ -6,8 +6,8 @@
 
 int main() {
     int listener = makeListeningSock(80);
+    struct requestValues rv;
     for (;;) {
-        struct requestValues rv;
         rv.sockfd = accept(listener, NULL, NULL);
         
         if (rv.sockfd < 0) {
