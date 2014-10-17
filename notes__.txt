@@ -39,3 +39,10 @@ sendfile
 404 - isFound = 0; isAccessDenied = 0;
 403 - isFound = 0; isAccessDenied = 1;
 405 - isFound = 1; isAccessDenied = 1;
+================================================
+https://www.openshift.com/ - бесплатный хостинг для веб-разработчиков.
+http://c-svr93.rhcloud.com/httptest/wikipedia_russia.html
+
+$OPENSHIFT_REPO_DIR/.openshift/action_hooks/start - параметры запуска сервера
+(исполняемый файл, IP, DOCUMENT_ROOT). IP, порт - неизменные параметры.
+$OPENSHIFT_REPO_DIR/.openshift/action_hooks/stop - параметры остановки.
