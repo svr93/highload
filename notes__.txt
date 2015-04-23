@@ -46,3 +46,5 @@ http://c-svr93.rhcloud.com/httptest/wikipedia_russia.html
 $OPENSHIFT_REPO_DIR/.openshift/action_hooks/start - параметры запуска сервера
 (исполняемый файл, IP, DOCUMENT_ROOT). IP, порт - неизменные параметры.
 $OPENSHIFT_REPO_DIR/.openshift/action_hooks/stop - параметры остановки.
+
+$OPENSHIFT_DIY_DIR/bin/control - дополнительные настройки.
