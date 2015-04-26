@@ -12,7 +12,7 @@
 #include "conttype.h" // for getting Content-Type
 #include "resphead.h" // for making response headers
 
-#define DOCUMENT_ROOT "/home/vladimir/tp_highload_server_sendfile__/"
+#define DOCUMENT_ROOT "/home/vladimir/tp_highload_server_sendfile/"
 #define REQ_BUF_SIZE 2048
 #define RESP_HEADERS_BUF_SIZE 256
 #define URL_LEN 512
